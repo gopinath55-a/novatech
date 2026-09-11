@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Test Ride | Yamaha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="booking-page">
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Yamaha home">
+        <img src="yamaha-logo.png" alt="Yamaha">
+      </a>
+      <a href="index.html#collection" class="back-link">&larr; Explore motorcycles</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="booking-hero">
+      <div class="section-inner booking-layout">
+        <div class="booking-intro">
+          <p class="eyebrow">Your next ride starts here</p>
+          <h1 class="booking-title">Book a Yamaha<br>test ride.</h1>
+          <p class="section-text">Feel the performance, explore the features and find the bike that feels right for you.</p>
+          <div class="booking-info">
+            <div><strong>15 min</strong><span>Quick guided ride</span></div>
+            <div><strong>Free</strong><span>No booking charges</span></div>
+            <div><strong>100+</strong><span>Dealership locations</span></div>
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-heading">
+            <p class="eyebrow">Test ride request</p>
+            <h2>Reserve your slot</h2>
+            <p>We will call you to confirm your appointment.</p>
+          </div>
+          <label for="bike">Choose motorcycle</label>
+          <select id="bike" name="bike" required>
+            <option value="">Select a model</option>
+            <option>R15 V4</option>
+            <option>MT-15 V2</option>
+            <option>FZ-S FI</option>
+            <option>Aerox 155</option>
+          </select>
+          <div class="form-row">
+            <div><label for="name">Full name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+            <div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="10-digit number" pattern="[0-9]{10}" required></div>
+          </div>
+          <label for="city">City / dealership location</label>
+          <input id="city" name="city" type="text" placeholder="e.g. Chennai" required>
+          <div class="form-row">
+            <div><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div>
+            <div><label for="time">Preferred time</label><select id="time" name="time" required><option value="">Select time</option><option>9:00 AM - 12:00 PM</option><option>12:00 PM - 3:00 PM</option><option>3:00 PM - 6:00 PM</option></select></div>
+          </div>
+          <label class="checkbox-label"><input type="checkbox" required> I agree to be contacted about this test ride.</label>
+          <button class="btn btn-primary form-submit" type="submit">Confirm test ride</button>
+          <p class="form-note">Your details are safe with us. No payment is required.</p>
+          <div class="booking-success" id="bookingSuccess" role="status" aria-live="polite">
+            <strong>Request received!</strong>
+            <span>Our Yamaha team will call you shortly to confirm your slot.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
